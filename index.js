@@ -64,10 +64,13 @@ function endGame(){
 }
 function moveDodger(e){
   if(e.which == LEFT_ARROW){
+
     moveDodgerLeft();
+    e.preventDefault();
   }
   else if (e.which == RIGHT_ARROW) {
     moveDodgerRight();
+    e.preventDefault();
   }
 }
 function moveDodgerLeft(){
