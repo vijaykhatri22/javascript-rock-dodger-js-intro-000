@@ -28,26 +28,20 @@ function checkCollision(rock) {
   }
 }
 function createRock(x) {
-  const rock = document.createElement('div')
-
+  const rock = document.createElement('div')    //adding rock
   rock.className = 'rock'
   rock.style.left = `${x}px`
   var top = 0
-  rock.style.top = `${top}px`;
-
-  GAME.appendChild(rock);
+  rock.style.top = `${top}px`;                
+  GAME.appendChild(rock);                 // rock added
 
   function moveRock(){
-
-
     if(checkCollision(rock)){
       endGame();
     }
     else if(positionToInteger(rock.style.top) < 360){
-
         rock.style.top = `${top+=2}px`;
         window.requestAnimationFrame(moveRock);
-      }
     }
     else{
       rock.remove();
