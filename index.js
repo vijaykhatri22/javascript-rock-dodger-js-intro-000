@@ -86,8 +86,8 @@ function moveDodgerRight(){
   if(right < 396){
   function step(){
     DODGER.style.left=`${right+4}px`;
-  }
   window.requestAnimationFrame(step);
+}
 }}
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0
