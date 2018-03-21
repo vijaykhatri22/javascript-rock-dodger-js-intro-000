@@ -46,7 +46,7 @@ function createRock(x) {
     if(checkCollision(rock)){
       endGame();
     }
-    else if(positionToInteger(ock.style.top) < 360){
+    else if(positionToInteger(rock.style.top) < 360){
       window.requestAnimationFrame(step);
     }
     else{
