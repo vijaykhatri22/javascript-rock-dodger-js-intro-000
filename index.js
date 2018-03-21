@@ -39,7 +39,7 @@ function createRock(x) {
     if(checkCollision(rock)){
       endGame();
     }
-    else if(positionToInteger(rock.style.top) < 360){
+    else if(positionToInteger(rock.style.top) < 400){
         rock.style.top = `${top+=2}px`;
         window.requestAnimationFrame(moveRock);
     }
