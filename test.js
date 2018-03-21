@@ -40,6 +40,7 @@ function createRock(x) {
   function moveRock(){
     function step(){
       rock.style.top = `${top += 2}px`;
+      window.requestAnimationFrame(step);
 
     }
 
