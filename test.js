@@ -40,20 +40,20 @@ function createRock(x) {
   function moveRock(){
     function step(){
       rock.style.top = `${top += 2}px`;
-      window.requestAnimationFrame(step)
+      
     }
 
     if(checkCollision(rock)){
       endGame();
     }
     else if(rock.style.top != GAME.style.bottom ){
-      moveRock();
+      window.requestAnimationFrame(step);
     }
     else{
       rock.remove();
     }
   }
-  window.requestAnimationFrame()
+  window.requestAnimationFrame(step)
   ROCKS.push(rock)
 
   return rock
