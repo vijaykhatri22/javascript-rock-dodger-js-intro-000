@@ -24,6 +24,25 @@ function checkCollision(rock) {
        (rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge)||
        (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge)){
          return true;
-       }  
+       }
   }
 }
+function createRock(x) {
+  const rock = document.createElement('div')
+
+  rock.className = 'rock'
+  rock.style.left = `${x}px`
+  var top = 0
+  rock.style.top = top;
+
+  GAME.appendChild(rock);
+
+  function moveRock(){
+    if(checkCollision(rock)){
+      endGame();
+    }
+    else if(rock.style.top != GAME.style.bottom ){
+      moveRock()
+    }
+  }
+  
