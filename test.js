@@ -44,7 +44,7 @@ function createRock(x) {
         window.requestAnimationFrame(moveRock);
     }
     else{
-      console.log("removed";)
+      console.log("removed")
       rock.remove();
     }
   }
