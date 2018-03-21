@@ -32,18 +32,16 @@ function createRock(x) {
 
   rock.className = 'rock'
   rock.style.left = `${x}px`
-  var top = 100
+  var top = 0
   rock.style.top = `${top}px`;
 
   GAME.appendChild(rock);
 
   function moveRock(){
     function step(){
-      rock.style.top = `${top += 2}px`;
+      rock.style.top = `${top+=2}px`;
       window.requestAnimationFrame(step);
-
     }
-
     if(checkCollision(rock)){
       endGame();
     }
@@ -54,6 +52,7 @@ function createRock(x) {
       rock.remove();
     }
   }
+  moveRock()
   window.requestAnimationFrame(step)
   ROCKS.push(rock)
 
