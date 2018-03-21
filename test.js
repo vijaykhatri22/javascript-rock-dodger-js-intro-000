@@ -40,7 +40,7 @@ function createRock(x) {
   function moveRock(){
     function step(){
       rock.style.top = `${top += 2}px`;
-      
+
     }
 
     if(checkCollision(rock)){
@@ -57,4 +57,8 @@ function createRock(x) {
   ROCKS.push(rock)
 
   return rock
+}
+function endGame(){
+  ROCK.remove();
+  return alert("You lose.")
 }
