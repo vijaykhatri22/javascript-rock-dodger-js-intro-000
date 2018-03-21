@@ -33,7 +33,7 @@ function createRock(x) {
   rock.className = 'rock'
   rock.style.left = `${x}px`
   var top = 0
-  rock.style.top = `${top+=2}px`;
+  rock.style.top = `${top}px`;
 
   GAME.appendChild(rock);
 
@@ -46,7 +46,7 @@ function createRock(x) {
     if(checkCollision(rock)){
       endGame();
     }
-    else if(rock.style.top != GAME.style.bottom ){
+    else if(positionToInteger(ock.style.top) < 360){
       window.requestAnimationFrame(step);
     }
     else{
