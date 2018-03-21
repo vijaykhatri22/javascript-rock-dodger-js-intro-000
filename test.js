@@ -32,14 +32,14 @@ function createRock(x) {
   rock.className = 'rock'
   rock.style.left = `${x}px`
   var top = 0
-  rock.style.top = `${top}px`;                
+  rock.style.top = `${top}px`;
   GAME.appendChild(rock);                 // rock added
 
   function moveRock(){
     if(checkCollision(rock)){
       endGame();
     }
-    else if(positionToInteger(rock.style.top) < 360){
+    else if(positionToInteger(rock.style.top) < 390){
         rock.style.top = `${top+=2}px`;
         window.requestAnimationFrame(moveRock);
     }
