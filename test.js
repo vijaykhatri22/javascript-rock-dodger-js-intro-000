@@ -39,11 +39,12 @@ function createRock(x) {
     if(checkCollision(rock)){
       endGame();
     }
-    else if(positionToInteger(rock.style.top) < 390){
+    else if(positionToInteger(rock.style.top) < 370){
         rock.style.top = `${top+=2}px`;
         window.requestAnimationFrame(moveRock);
     }
     else{
+      console.log("removed";)
       rock.remove();
     }
   }
