@@ -55,7 +55,7 @@ function createRock(x) {
   return rock
 }
 function endGame(){
-  
+
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger);
   alert("You lose.")
@@ -70,6 +70,7 @@ function moveDodger(e){
   else if (e.which == RIGHT_ARROW) {
     moveDodgerRight();
     e.preventDefault();
+    e.stopPropagation();
   }
 }
 function moveDodgerLeft(){
