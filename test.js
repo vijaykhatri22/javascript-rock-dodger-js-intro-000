@@ -60,7 +60,8 @@ function createRock(x) {
 }
 function endGame(){
   ROCK.remove();
-  return alert("You lose.")
+  clearInterval(gameInterval);
+  alert("You lose.")
 }
 function moveDodger(e){
   if(e.which == LEFT_ARROW){
