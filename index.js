@@ -39,7 +39,7 @@ function createRock(x) {
     if(checkCollision(rock)){
       endGame();
     }
-    else if(positionToInteger(rock.style.top) < 370){
+    else if(positionToInteger(rock.style.top) < 360){
         rock.style.top = `${top+=2}px`;
         window.requestAnimationFrame(moveRock);
     }
@@ -90,7 +90,7 @@ function moveDodgerRight(){
   if(right < 396){
     window.requestAnimationFrame(step)
   }
-}  
+}
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0
 }
