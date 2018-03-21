@@ -62,3 +62,25 @@ function endGame(){
   ROCK.remove();
   return alert("You lose.")
 }
+function moveDodger(e){
+  if(e.which == LEFT_ARROW){
+    moveDodgerLeft();
+  }
+  else if (e.which == RIGHT_ARROW) {
+    moveDodgerRight();
+  }
+}
+function moveDodgerLeft(){
+  var left = positionToInteger(DODGER.style.left);
+  function step(){
+    DODGER.style.left=`${left-4}px`;
+  }
+  window.requestAnimationFrame(step);
+}
+function moveDodgerRight(){
+  var right = positionToInteger(DODGER.style.left);
+  function step(){
+    DODGER.style.left=`${right+4}px`;
+  }
+  window.requestAnimationFrame(step);
+}
