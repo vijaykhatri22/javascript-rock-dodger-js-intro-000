@@ -67,7 +67,7 @@ function moveDodger(e){
     e.preventDefault();
     e.stopPropagation();
     moveDodgerLeft();
-    
+
   }
   else if (e.which == RIGHT_ARROW) {
     moveDodgerRight();
@@ -85,7 +85,7 @@ function moveDodgerLeft(){
 }
 function moveDodgerRight(){
   var right = positionToInteger(DODGER.style.left);
-  if(right < 400){
+  if(right < 396){
   function step(){
     DODGER.style.left=`${right+4}px`;
   }
