@@ -38,13 +38,13 @@ function createRock(x) {
   GAME.appendChild(rock);
 
   function moveRock(){
-    
-    
+
+
     if(checkCollision(rock)){
       endGame();
     }
     else if(positionToInteger(rock.style.top) < 360){
-    
+
         rock.style.top = `${top+=2}px`;
         window.requestAnimationFrame(moveRock);
       }
@@ -53,7 +53,7 @@ function createRock(x) {
       rock.remove();
     }
   }
-  
+
   window.requestAnimationFrame(moveRock)
   ROCKS.push(rock)
 
@@ -61,7 +61,7 @@ function createRock(x) {
 }
 function endGame(){
   ROCK.remove();
-  clearInterval(gameInterval);
+//  clearInterval(gameInterval);
   alert("You lose.")
 }
 function moveDodger(e){
